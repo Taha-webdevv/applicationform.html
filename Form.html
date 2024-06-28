@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F9FF;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4A90E2;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            background-color: #5E8DBE;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .section-content {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #F0F4FA;
+        }
+        label {
+            display: block;
+            margin: 5px 0 2px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .inline-inputs {
+            display: flex;
+            justify-content: space-between;
+        }
+        .inline-inputs label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .inline-inputs input {
+            flex: 1;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group label, .radio-group label {
+            margin-right: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .terms {
+            font-size: 0.9em;
+            color: #4A90E2;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .signature-section input[type="text"] {
+            flex: 1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>APPLICATION FORM</h1>
+
+        <div class="section">
+            <div class="section-title">A. General Questions</div>
+            <div class="section-content">
+                <label for="name">Proposed Insured's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Please use capital letters">
+
+                <div class="inline-inputs">
+                    <label for="birthdate">Birth Date:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                    <label>Gender:</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+
+                <div class="inline-inputs">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="inline-inputs">
+                    <label for="idnumber">ID Number:</label>
+                    <input type="text" id="idnumber" name="idnumber">
+                    <label for="ssn">Social Security Number:</label>
+                    <input type="text" id="ssn" name="ssn">
+                </div>
+
+                <div class="checkbox-group">
+                    <label>Status:</label>
+                    <label><input type="checkbox" name="status" value="single"> Single</label>
+                    <label><input type="checkbox" name="status" value="married"> Married</label>
+                    <label><input type="checkbox" name="status" value="divorced"> Divorced</label>
+                    <label><input type="checkbox" name="status" value="others"> Others</label>
+                </div>
+
+                <div class="inline-inputs">
+                    <label for="occupation">Occupation:</label>
+                    <input type="text" id="occupation" name="occupation">
+                    <label>Are you a retiree?</label>
+                    <label><input type="radio" name="retiree" value="yes"> Yes</label>
+                    <label><input type="radio" name="retiree" value="no"> No</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">B. Type of Health Coverage</div>
+            <div class="section-content">
+                <div class="inline-inputs">
+                    <label>Employee:</label>
+                    <label><input type="radio" name="employee" value="yes"> Yes</label>
+                    <label><input type="radio" name="employee" value="no"> No</label>
+                    <label for="plan-choice-employee">Plan Choice:</label>
+                    <input type="text" id="plan-choice-employee" name="plan-choice-employee">
+                </div>
+
+                <div class="inline-inputs">
+                    <label>Spouse:</label>
+                    <label><input type="radio" name="spouse" value="yes"> Yes</label>
+                    <label><input type="radio" name="spouse" value="no"> No</label>
+                    <label for="plan-choice-spouse">Plan Choice:</label>
+                    <input type="text" id="plan-choice-spouse" name="plan-choice-spouse">
+                </div>
+
+                <div class="inline-inputs">
+                    <label>Children:</label>
+                    <label><input type="radio" name="children" value="yes"> Yes</label>
+                    <label><input type="radio" name="children" value="no"> No</label>
+                    <label for="plan-choice-children">Plan Choice:</label>
+                    <input type="text" id="plan-choice-children" name="plan-choice-children">
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>SSN No.</th>
+                            <th>Relationship to proposed insured</th>
+                            <th>Birth Date</th>
+                            <th>Age</th>
+                            <th>Sex</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="dependent-name-1"></td>
+                            <td><input type="text" name="dependent-ssn-1"></td>
+                            <td><input type="text" name="dependent-relationship-1"></td>
+                            <td><input type="date" name="dependent-birthdate-1"></td>
+                            <td><input type="number" name="dependent-age-1"></td>
+                            <td><input type="text" name="dependent-sex-1"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dependent-name-2"></td>
+                            <td><input type="text" name="dependent-ssn-2"></td>
+                            <td><input type="text" name="dependent-relationship-2"></td>
+                            <td><input type="date" name="dependent-birthdate-2"></td>
+                            <td><input type="number" name="dependent-age-2"></td>
+                            <td><input type="text" name="dependent-sex-2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="dependent-name-3"></td>
+                            <td><input type="text" name="dependent-ssn-3"></td>
+                            <td><input type="text" name="dependent-relationship-3"></td>
+                            <td><input type="date" name="dependent-birthdate-3"></td>
+                            <td><input type="number" name="dependent-age-3"></td>
+                            <td><input type="text" name="dependent-sex-3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">C. The Policy</div>
+            <div class="section-content">
+                <div class="inline-inputs">
+                    <label for="units">Units:</label>
+                    <input type="number" id="units" name="units">
+                    <label for="annual-premium">Annual Premium:</label>
+                    <input type="number" id="annual-premium" name="annual-premium">
+                </div>
+
+                <div class="radio-group">
+                    <label>Payment Mode:</label>
+                    <label><input type="radio" name="payment-mode" value="annual"> Annual</label>
+                    <label><input type="radio" name="payment-mode" value="semi-annual"> Semi-Annual</label>
+                    <label><input type="radio" name="payment-mode" value="monthly"> Monthly PAT (complete PAT card)</label>
+                </div>
+
+                <div class="inline-inputs">
+                    <label for="cash-with-application">Cash with Application:</label>
+                    <input type="number" id="cash-with-application" name="cash-with-application">
+                </div>
+                <div>
+                    <label for="planned-modal-premium">Planned modal premium:</label>
+                    <input type="number" id="planned-modal-premium" name="planned-modal-premium">
+                </div>
+            </div>
+        </div>
+
+        <div class="terms">
+            Terms & Conditions: Improvement should be measured regularly and assessed in 
+            order for you to know what's beneficial and what is not. This will 
+            help you set new targets.
+        </div>
+
+        <div class="signature-section">
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature">
+        </div>
+        <div>    
+        <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+    </div>
+</body>
+</html>
